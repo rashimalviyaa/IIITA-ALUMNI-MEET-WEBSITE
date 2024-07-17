@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/sitelogo.jpg" type="image/x-icon">
+  <title>Industry-Academia Conclave </title>
+  <style>
+    .chief-guests {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .chief-guests h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .guest-list {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+
+    .guest {
+      flex: 1;
+      max-width: 200px;
+      margin: 10px 20px;
+      /* Added horizontal margin for spacing */
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+
+    .guest img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .guest p.name {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      background-color: #fff;
+      margin: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .guest:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .guest-list {
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .guest {
+        max-width: 300px;
+      }
+    }
+
+    .speakers-section {
+      text-align: center;
+      padding: 20px;
+    }
+
+    .speakers-section h2 {
+      font-size: 24px;
+      margin-bottom: 20px;
+      text-align: center;
+      display: block;
+    }
+
+    .speakers-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 30px;
+      /* Increased gap between the photos */
+      justify-items: center;
+    }
+
+    .speaker {
+      width: 200px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 10px;
+      overflow: hidden;
+      background-color: #f9f9f9;
+      transition: transform 0.3s ease;
+    }
+
+    .speaker:nth-child(2n) {
+      margin-top: 20px;
+      /* Zigzag effect for even items */
+    }
+
+    .speaker img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .speaker p.name {
+      padding: 10px;
+      font-size: 16px;
+      font-weight: bold;
+      color: #333;
+      background-color: #fff;
+      margin: 0;
+      border-top: 1px solid #eee;
+    }
+
+    .speaker:hover {
+      transform: scale(1.05);
+    }
+
+    @media (max-width: 768px) {
+      .speaker {
+        width: 100%;
+        max-width: 300px;
+        margin-top: 0;
+        /* Remove zigzag effect on small screens */
+      }
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    .logowrap img {
+			width: 120px;
+			/* Adjust the width as needed */
+			height: 120px;
+			/* Maintain the aspect ratio */
+      margin-left: 25px;
+		}
+    .carousel-nav-icon {
+    height: 250px;
+    width: 250px;
+    background-size: cover;
+    background-position: center center;
+    
+}
+
+.carousel-item .col, .carousel-item .col-sm, .carousel-item .col-md {
+    margin: 8px;
+    height: 300px;
+    background-size: cover;
+    background-position: center center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.carousel .caption {
+    margin-top: 10px;
+    font-size: 1.2em;
+    color: #333;
+    text-align: center;
+}
+.carousel-arrow {
+    width: 50px; /* Adjust width as needed */
+    height: 50px; /* Adjust height as needed */
+    fill: teal; /* Adjust fill color as needed */
+}
+
+.carousel-nav-icon svg {
+  margin-top: 70px;
+    width: 50px;
+    height: 50px;
+    color: teal;
+}
+.photo-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Center items horizontally */
+}
+
+.photo-container img {
+    width: 20%; /* Adjust the width as needed */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 10px; /* Add margin between images */
+}
+.photo img {
+  
+  margin-right: 50px;
+    width: 100%; /* Ensures the image fills its container */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Removes any extra space below the image */
+    border-radius: 5px; /* Optional: Adds rounded corners */
+}
+.photo .name {
+    margin-top: 5px;
+    font-size: 14px;
+    margin-right: 40px;
+}
+
+
+  </style>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+  <!-- nice select -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"
+    integrity="sha256-mLBIhmBvigTFWPSCtvdu6a76T+3Xyt+K571hupeFLg4=" crossorigin="anonymous" />
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+</head>
+
+<body>
+  
+  <div class="hero_area">
+    <div class="hero_bg_box">
+      <img src="images/sitelogo.jpg" alt="">
+    </div>
+    <!-- header section strats -->
+    <header class="header_section">
+
+      <div class="header_bottom">
+        <div class="container-fluid">
+          <nav class="navbar navbar-expand-lg custom_nav-container ">
+        <div style="margin-left: -40px;"class="logowrap" itemprop="logo">
+						<img src="images/sitelogo.jpg" alt="Logo Image">
+						
+					</div>
+
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class=""> </span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav  ">
+                <li class="nav-item active">
+                  <a class="nav-link" href="../index.html">GAM 2024<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="index.html"> Home</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#about"> About</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#speakers">Speakers</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="researchfocus.html"> IIITA Research Focus Area</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#organisers">Organising Committee</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="https://alumnimeet.iiita.ac.in/industry-academia/Possible%20types%20of%20Collaborations_MOUs%20between%20Industries%20and%20IIITA.pdf" target="_blank">Collabrations/MoUs</a>
+
+              </ul>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-10 col-md-11 mx-auto">
+                  <section style="margin-left: 100px;">
+                    <h1 style=" text-align: center; color: white;"><strong>Industry-Academia Conclave</strong> </h1>
+                    <h5 style=" text-align: center; color:white ;"><strong>November 5th, 2024</strong> </h5>
+                    <div class="chief-guests">
+
+                      <div class="guest-list">
+
+                        <div class="guest">
+                          <img src="images/guest1.jpg" alt="Chief Guest 1">
+                          <p class="name">Chief Patron
+                            Dr. Mukul Sutaone
+                            Director IIITA</p>
+                        </div>
+                        <div class="guest">
+                          <img src="images/guest2.jpg" alt="Chief Guest 2">
+                          <p class="name">Chief Guest
+                            Dr. Anand Deshpande
+                            Chairman, BoG</p>
+                        </div>
+                        <div class="guest">
+                          <img src="images/guest3.jpg" alt="Chief Guest 3">
+                          <p class="name">Guest of Honor
+                            Prof. R.S Verma
+                            Former Director IIITA</p>
+                        </div>
+                        <div class="guest">
+                          <img src="images/guest4.jpg" alt="Chief Guest 4">
+                          <p class="name">RSVP
+                            Prof. Anupam
+                            Dean (Alumni Affairs)</p>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-10 col-md-11 mx-auto">
+                  <section style="margin-left: 80px;" class="speakers-section">
+                    <div class="container">
+                      <div class="heading-container heading-center">
+                        <h4 style=" text-align: center; color:white ; margin-bottom: 40px;"><strong>Alumni Speakers
+                            During Conclave</strong> </h4>
+                      </div>
+                      <div class="speakers-list">
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 1" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 2" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 3" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 4" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 5" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 6" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="container ">
+              <div class="row">
+                <div class="col-lg-10 col-md-11 mx-auto">
+                  <section style="margin-left: 80px;" class="speakers-section">
+                    <div class="container">
+                      <div class="heading-container heading-center">
+                        <h4 style=" text-align: center; color:white ; margin-bottom: 40px;"><strong>Non-Alumni Speakers
+                            During Conclave</strong> </h4>
+                      </div>
+                      <div class="speakers-list">
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 1" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 2" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 3" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 4" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 5" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                        <div class="speaker">
+                          <div>
+                            <img src="images/aguest1.jpg" alt="Speaker 6" />
+                          </div>
+                          <div class="detail-box">
+                            <p class="name">Bhupendra</p>
+                          </div>
+                        </div>
+                       </div>
+                    </div>
+                  </section>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="carousel_btn-box">
+          <a class="carousel-control-prev" href="#customCarousel1" role="button" data-slide="prev">
+            <i class="fa fa-arrow-left" aria-hidden="true"></i>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="carousel-control-next" href="#customCarousel1" role="button" data-slide="next">
+            <i class="fa fa-arrow-right" aria-hidden="true"></i>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+      </div>
+    </section>
+    <!-- end slider section -->
+  </div>
+  <div  class="my-5 text-center container">
+    <div class="row mb-2">
+       <div class="col text-center">
+          <h2 style="margin-top: 70px;" ><strong> Alumni Speakers During Conclave </strong></h2  >
+          <p class="lead"><a target="_blank" href="https://codepen.io/davidbiek/pen/OJpQpza"></a></p>
+       </div>
+    </div>
+    <div class="row d-flex align-items-center">
+       <div class="col-1 d-flex align-items-center justify-content-center">
+          <a href="#carouselExampleIndicators" role="button" data-slide="prev">
+             <div class="carousel-nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                </svg>
+             </div>
+          </a>
+       </div>
+       <div  class="col-10">
+          <!--Start carousel-->
+          <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 1</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 2</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 4</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 5</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!--End carousel-->
+       </div>
+       <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselExampleIndicators" data-slide="next">
+          <div class="carousel-nav-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+             </svg>
+          </div>
+          </a>
+       </div>
+    </div>
+ </div>
+ 
+<!--NON ALUMNI SPEAKERS-->
+<section>
+   <div  class="my-5 text-center container">
+    <div class="row mb-2">
+       <div class="col text-center">
+          <h2 style="margin-top: 60px;" ><strong> Non - Alumni Speakers During Conclave </strong></h2  >
+          <p class="lead"><a target="_blank" href="https://codepen.io/davidbiek/pen/OJpQpza"></a></p>
+       </div>
+    </div>
+    <div class="row d-flex align-items-center">
+       <div class="col-1 d-flex align-items-center justify-content-center">
+          <a href="#carouselAlumni" role="button" data-slide="prev">
+             <div class="carousel-nav-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                   <path d="m88.6,121.3c0.8,0.8 1.8,1.2 2.9,1.2s2.1-0.4 2.9-1.2c1.6-1.6 1.6-4.2 0-5.8l-51-51 51-51c1.6-1.6 1.6-4.2 0-5.8s-4.2-1.6-5.8,0l-54,53.9c-1.6,1.6-1.6,4.2 0,5.8l54,53.9z"/>
+                </svg>
+             </div>
+          </a>
+       </div>
+       <div  class="col-10">
+          <!--Start carousel-->
+          <div id="carouselAlumni" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="row">
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 1</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 2</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="row">
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 4</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 5</div>
+                        </div>
+                        <div class="col-12 col-md d-flex flex-column align-items-center justify-content-center">
+                            <div style="background-image:url('images/aguest1.jpg');" class="carousel-nav-icon">
+                            </div>
+                            <div class="caption">Alumni Name 6</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+          <!--End carousel-->
+       </div>
+       <div class="col-1 d-flex align-items-center justify-content-center"><a  href="#carouselAlumni" data-slide="next">
+          <div class="carousel-nav-icon">
+             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <path d="m40.4,121.3c-0.8,0.8-1.8,1.2-2.9,1.2s-2.1-0.4-2.9-1.2c-1.6-1.6-1.6-4.2 0-5.8l51-51-51-51c-1.6-1.6-1.6-4.2 0-5.8 1.6-1.6 4.2-1.6 5.8,0l53.9,53.9c1.6,1.6 1.6,4.2 0,5.8l-53.9,53.9z"/>
+             </svg>
+          </div>
+          </a>
+       </div>
+    </div>
+ </div>
+</section>
+
+  <!-- about section -->
+
+  <section  style="background-color: rgb(225, 221, 221);" id="about" style="margin-top: 100px;" class="about_section">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-5 offset-md-1">
+          <div style="margin-right:-500px; " class="detail-box pr-md-2">
+            <div class="heading_container">
+              <h2 style="text-align: center; color: teal;"class=""><br>
+                About The Industry Academia Conclave 2024
+              </h2>
+            </div>
+            <p class="detail_p_mt">
+              The Industry-Academia collaboration is beneficial for an Industry as well as an Institute with the shared
+              human resource, Infrastructure, lab setup, equipment & facilities. The Industry can take help from an
+              Institute for carrying out R&D and to solve any technical hurdles, and on the other hand the students &
+              faculties get a chance to further hone their skills & knowledge in the Industry environment by taking up
+              internship opportunities & related projects. It is a win-win situation for both parties - the companies
+              offer business insights and the students contribute proven methodology and expertise. While working on
+              Industry-sponsored projects at an academic Institute, students learn how to make their methodologies
+              tangible in real life situations. It helps to create employable students “Industry-ready students”. The
+              main benefit for companies from this cooperation is the access to the latest research results and
+              innovative new methodologies. Companies which do not have a close relationship to the academic community
+              are expected to advance slower. They miss out on early access to the latest research results and
+              methodologies and then need more time to put these methods into practice. Being one of the leading
+              Teaching and Research Institutions of India, during this Interactive Industry-Academia Conclave, the IIITA
+              would like to explore possible collaboration with the participating companies for augmenting its
+              academics, research, innovation, employability and greater productivity, through various measures.
+              <br>
+              <br>
+            </p>
+           
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </section>
+  <section>
+    <div style="margin-top: 70px; text-align: center;">
+      <h2 style="margin-bottom: 30px; color: 333;"><strong>Alumni Guest Of Honor</strong></h2>
+      <div class="photo-container">
+          <div class="photo">
+              <img src="images/alumniguestofhonor.jpg" style=" size:10px; width: 250px; height: auto;" >
+              <p class="name">alumni guest 1</p>
+          </div>
+          <div class="photo">
+              <img src="images/alumniguestofhonor.jpg" style="width: 250px; height: auto;" >
+              <p class="name">alumni guest 2</p>
+          </div>
+          <div class="photo">
+              <img src="images/alumniguestofhonor.jpg" style="width: 250px; height: auto;">
+              <p class="name">alumni guest 3</p>
+          </div>
+      </div>
+  </div>
+  
+</section>
+  <!-- about section ends -->
+
+
+  <!-- contact section -->
+  <section id="speakers" class="contact_section ">
+    <div class="container-fluid">
+      <h2 style="margin-top: 100px; text-align: center; color: rgb(21, 19, 19);">
+      
+        <strong ><br> Brief Biodata Of Speakers</strong>
+      </h2>
+      <br>
+      <!-- first-->
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="img-box " style="margin-left: 250px; margin-right: 100px;">
+            <img src="images/briefbiodata.jpg" class="box_img" alt="about img" height="250 px" width="100px">
+            <p style="margin-top: 10px;">
+            <h6>Prabhat Kulratna(B. Tech IT 2011 Batch)</h6>
+            Director/Co-founder
+            Prosperme Consulting Pvt Ltd
+            <p>Website:<a href="www.prosperme.in">www.prosperme.in</a></p>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center">
+              <h2 style="color: #a9a1a1;">Brief Bio-Data</h2>
+              <p>Prabhat Started off as an investor and fell in love with the Real Estate industry. With the intent to
+                pass on this message to the world, ProsperMe was born! We Believe in educating our customers and explain
+                the science of investing. A tryst with technology and background in IT helps me shaping ProsperMe as a
+                leading PropTech real Estate firm, And with an Entrepreneur's heart, today I aim to create abundance for
+                as many lives as possible. ProsperMe team and I advise & manage cashflow producing and wealth
+                multiplying Real-Estate centric portfolios using our timeproof, well-tested & highly successful winning
+                recipe, thereby enriching investors with generational wealth and leaving Prosperme’s footprints in
+                millions of home for generations to come.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- second -->
+      <div class="row">
+        <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center">
+              <h2 style="color: #a9a1a1;">Brief Bio-Data</h2>
+              <p>Praveer Neeraj is an IT Audit and Information Security professional, a risk advisor, and a management
+                consultant whose qualifications include an MBA in IT from IIIT Allahabad, IRCA & CQI certified ISO
+                27001:2013 Lead Auditor. Also certified in ITIL Foundation V3, Diploma in Cyber Laws & Cyber Security,
+                Ethical Hacking and Green Belt Six Sigma. He is also a professional member of ISACA Bangalore chapter
+                and also ISC2 Bangalore chapter. Skill sets acquired during my career include detailed knowledge of ISO
+                27001, Third Party Risk Management (TPRM), IT Audit (ITGC, Application Controls, Internal Audit, SOC,
+                SOX 404 etc), Control Design, Control Testing, Risk Advisory, Project Monitoring/Management, NeGP, MMPs
+                etc along with IT Infrastructure tools, technologies, securities and best practices. He is currently
+                working as Regional Security and Regulatory Compliance Lead with BT e-Serv India Pvt. Ltd. BT is short
+                form of British Telecom, headquartered in UK. While working here, He has I been able to further
+                strengthen my technical and managerial acumen in InfoSec domain.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box " style="margin-left: 250px; margin-right: 100px;">
+            <img src="images/briefbiodata2.jpg" class="box_img" alt="about img" height="250 px" width="100px">
+            <p style="margin-top: 10px;">
+            <h6> Praveer Neeraj(MBA 2008 Batch)</h6>
+            Associate Principal
+            Larsen & Toubro Infotech
+            <p>Website:<a href="https://accgbcmadhubani.business.site">https://accgbcmadhubani.business.site</a></p>
+            </p>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!-- third-->
+      <div class="row">
+        <div class="col-md-6 px-0">
+          <div class="img-box " style="margin-left: 250px; margin-right: 100px;">
+            <img src="images/briefbiodata3.jpg" class="box_img" alt="about img" height="250 px" width="100px">
+            <p style="margin-top: 10px;">
+            <h6> Soumendra Nath Ray(B.Tech IT 2000 Batch)</h6>
+
+            Vice President
+            Gemini Solutions
+
+            <p>Website:<a href="https://www.geminisolutions.com">https://www.geminisolutions.com</a></p>
+            </p>
+          </div>
+        </div>
+        <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center">
+              <h2 style="color: #a9a1a1;">Brief Bio-Data</h2>
+              <p>Owned and managed 600+ billed employees for largest asset management client in US. Directly managed 350
+                employees in middle office of largest US Investment Banking client. Led setup of shared services for
+                multiple billion-dollar firms of US, UK and India. Digital Transformation in conglomerates across
+                multiple functions and geographies. Business Feasibility and Detailed Project Report for mega
+                infrastructure projects. Set up polytechnic institutions for engineering, pharmacy and management.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <hr>
+      <!--fourth-->
+      <div class="row">
+        <div class="col-md-5 mx-auto">
+          <div class="form_container">
+            <div class="heading_container heading_center">
+              <h2 style="color: #a9a1a1;">Brief Bio-Data</h2>
+              <p>Gyan is an engineering graduate from 2003-2007 batch and further pursued law. After working with
+                several MNCs and law firms for over 12 years, Gyan started LexAnalytico Consulting in 2020. He is a
+                registered patent attorney with over 15 years of experience in the creating, protecting, managing and
+                licensing intellectual property assets. Being a registered Patent Agent he has enabled numerous MNCs,
+                law firms, individual inventors, and SMEs to achieve their IP goals. He earlier managed a patent
+                portfolio of 5500 patents for a global technology licensing company. He is also listed as an inventor
+                for more than 30 patents and applications filed in US.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6 px-0">
+          <div class="img-box " style="margin-left: 250px; margin-right: 100px;">
+            <img src="images/briefbiodata4.jpg" class="box_img" alt="about img" height="250 px" width="100px">
+            <p style="margin-top: 10px;">
+            <h6>Gyanveer Singh(B. Tech IT 2003 Batch)</h6>
+
+            Founding Partner
+            LexAnalytico Consulting Pvt Ltd
+
+            <p>Website:<a href="https://lexanalytico.com">https://lexanalytico.com</a></p>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <hr>
+  </section>
+  
+  <!--copy paste the syntax of first and second section alternatively according to the number of people needed to be introduced-->
+  <!-- end contact section -->
+
+  <section id="organisers" style="margin-top: 20px; margin-bottom: 60px;">
+    <h2 style="margin-top: 40px; text-align: center; color: rgb(155, 79, 79);">
+      <strong> Organising Committee</strong>
+    </h2>
+    <h5 style="margin-top: 50px; text-align: center;"><strong> Prof Anupam Agrawal - Chairman (Dept. of IT)</strong>
+    </h5>
+
+    <h5 style="margin-top: 20px; text-align: center;"><strong> Prof. O.P. Vyas - member (Dept. of IT)</strong></h5>
+    <h5 style="margin-top: 20; text-align: center;"><strong> Dr. Abhishek Vaish - member (Dept. of IT)</strong></h5>
+    <h5 style="margin-top: 20px; text-align: center;"><strong> Dr. Utkarsh Goel - member (Dept. of MS)</strong></h5>
+    <h5 style="margin-top: 20px; text-align: center;"><strong>Dr. Muneendra Ojha - member (Dept. of IT)</strong></h5>
+    <h5 style="margin-top: 20px; text-align: center;"><strong>Dr. Rahul Harishchandra Meshram - member (Dept. of
+        EC)</strong></h5>
+    <h5 style="margin-top: 20px; text-align: center;"><strong> Dr. Nabajyoti Mazumdar - Convenor (Dept. of IT)</strong>
+    </h5>
+  </section>
+
+
+  <!-- info section -->
+  <section style="background-color: rgb(4, 60, 60);" class="info_section ">
+    <div class="container">
+      <div class="info_top">
+        <div class="row">
+          <div class="col-md-3 ">
+            <a class="navbar-brand" href="index.html">
+              IIITA ALLAHABAD
+            </a>
+          </div>
+
+        </div>
+      </div>
+      <div class="info_bottom">
+        <div class="row">
+          <div class="col-lg-3 col-md-6">
+            <div class="info_detail">
+              <h5>
+                Address
+              </h5>
+              <p>
+                IIIT Allahabad, Devghat, Jhalwa Prayagraj - 211015 Uttar Pradesh, India
+
+              </p>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6" style="margin-left:200px; margin-top: -65px;">
+
+            <div>
+              <img src="images/sitelogo.jpg" alt="Logo Image" height="200px" width="200px">
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info_section -->
+
+  <!-- footer section -->
+  <footer class="footer_section">
+    <div class="container">
+
+    </div>
+  </footer>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+    crossorigin="anonymous"></script>
+  <!-- bootstrap js -->
+  <script src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  <!-- nice select -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"
+    integrity="sha256-Zr3vByTlMGQhvMfgkQ5BtWRSKBGa2QlspKYJnkjZTmo=" crossorigin="anonymous"></script>
+  <!-- custom js -->
+  <script src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap"></script>
+  <!-- End Google Map -->
+</body>
+
+</html>
