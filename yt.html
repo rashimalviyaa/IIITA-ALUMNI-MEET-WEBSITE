@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="images/sitelogo.jpg" type="image/x-icon">
+	<title>GAM2024</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.rateyo.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+	<link rel="stylesheet" type="text/css" href="css/meanmenu.min.css">
+	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	<style>
+		/* Optional: Adjust the spacing around the banner section */
+		.banner {
+			padding: 40px;
+			/* Adjust padding as needed */
+		}
+
+		.submenu {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			top: 100%;
+			left: 0;
+			z-index: 1000;
+		}
+
+		.submenu li {
+			width: 250px;
+		}
+
+		.submenu a {
+			padding: 10px 15px;
+			white-space: nowrap;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.menu-parent:hover .submenu {
+			display: block;
+		}
+
+		.submenu2 {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			top: 100%;
+			left: 30%;
+			z-index: 1000;
+		}
+
+		.submenu2 li {
+			width: 200px;
+		}
+
+		.submenu2 a {
+			padding: 10px 15px;
+			white-space: nowrap;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.menu-parent2:hover .submenu2 {
+			display: block;
+		}
+
+		.whyUs-section {
+			position: relative;
+			width: 100%;
+			padding: 0;
+			/* Remove any padding */
+		}
+
+		.whyUs-section .container {
+			padding: 0;
+			/* Ensure no padding on the container */
+		}
+
+		.banner-image {
+			width: 100%;
+			height: auto;
+			display: block;
+			/* Ensure the image is displayed as a block element */
+		}
+
+		.logowrap img {
+			width: 120px;
+			/* Adjust the width as needed */
+			height: 80px;
+			/* Maintain the aspect ratio */
+		}
+
+		body {
+			font-family: 'Arial, sans-serif';
+			background-color: #f9f9f9;
+			margin: 0;
+			padding: 0;
+		}
+
+		.chief-guests {
+			margin-bottom: 40px;
+			text-align: center;
+			padding: 50px 20px;
+		}
+
+		.alumni-guests {
+			margin-bottom: 40px;
+			text-align: center;
+			padding: 50px 20px;
+		}
+
+		.youtube {
+			margin-bottom: -250px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 130px;
+
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.AboutTheMeet {
+			margin-bottom: -40px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 200px;
+
+		}
+
+		.activities {
+			margin-top: 20px;
+			margin-bottom: -50px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 170px;
+
+		}
+
+		.sponsors {
+			margin-top: 20px;
+			margin-bottom: -70px;
+			text-align: center;
+			padding: 50px 20px;
+
+		}
+
+		h2 {
+			font-size: 2.5em;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.guest-list {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			flex-wrap: wrap;
+		}
+
+		.guest {
+			background-color: #fff;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			width: 200px;
+			transition: transform 0.3s;
+		}
+
+		.guest:hover {
+			transform: translateY(-10px);
+		}
+
+		.guest img {
+			width: 100%;
+			height: auto;
+			border-bottom: 2px solid black;
+		}
+
+		.name {
+			padding: 10px;
+			font-size: 1.2em;
+			color: #555;
+			background-color: teal;
+			border-top: 2px solid #fff;
+			margin: 0;
+		}
+
+		.announcement {
+			background-color: #323e54;
+			;
+			padding: 20px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.announcement-content {
+			max-width: 800px;
+			margin: 0 auto;
+			color: whitesmoke;
+			line-height: 1.6;
+		}
+
+		.announcement-content p {
+			font-size: 16px;
+			/* Adjust the font size as needed */
+			margin-bottom: 10px;
+		}
+
+		.announcement-content p strong {
+			font-weight: bold;
+		}
+
+		.gallery-images-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding: 20px;
+		}
+
+		.gallery-img-wrap {
+			flex: 0 0 calc(33.33% - 20px);
+			/* Adjust width for 3 items per row with some spacing */
+			margin-bottom: 20px;
+			/* Adjust vertical spacing between rows */
+			text-align: center;
+		}
+
+		.gallery-img-wrap a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.img-overlay-container {
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			height: 200px;
+			/* Fixed height for each image container */
+		}
+
+		.img-overlay-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			/* Ensure images cover the entire container */
+			object-position: center;
+			/* Center the image within the container */
+			display: block;
+			transition: transform 0.3s ease;
+		}
+
+		.img-overlay-container:hover img {
+			transform: scale(1.1);
+			/* Example hover effect */
+		}
+
+		.overlay-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: #fff;
+			padding: 10px;
+			font-size: 14px;
+		}
+
+		.sponsors-section {
+			padding: 40px 0;
+			/* Adjust padding as needed */
+			text-align: center;
+			/* Center align content */
+		}
+
+		.sponsors-section .container {
+			display: flex;
+			justify-content: center;
+			/* Center align flex items horizontally */
+			align-items: center;
+			/* Center align flex items vertically */
+			flex-wrap: wrap;
+			/* Ensure content wraps on smaller screens */
+		}
+
+		.sponsor-wrap {
+			margin: 5px;
+			/* Adjust margin between logos */
+		}
+
+		.sponsor-wrap img {
+			width: 150px;
+			/* Adjust width of each logo */
+			height: auto;
+			display: block;
+			border-radius: 8px;
+			/* Optional: Add border radius for rounded corners */
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			/* Optional: Add box shadow for depth */
+		}
+
+		.alumni-testimonials {
+			padding: 50px 0;
+			text-align: center;
+		}
+
+		body {
+			background-color: #f0f2f5;
+			color: #333;
+			font-family: Arial, sans-serif;
+		}
+
+		.alumni-testimonials {
+			padding: 50px 0;
+			background-color: #fff;
+			text-align: center;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			margin: 30px auto;
+			border-radius: 10px;
+			max-width: 1200px;
+		}
+
+		.alumni-testimonials h1 {
+			font-size: 2.5em;
+			margin-bottom: 30px;
+			color: #222;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.alumni-carousel .testimonial-item {
+			margin: 15px;
+			padding: 20px;
+			background: #fafafa;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.alumni-carousel .testimonial-item figure {
+			margin: 0 0 15px;
+		}
+
+		.alumni-carousel .testimonial-item img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.alumni-carousel .testimonial-item h3 {
+			font-size: 1.3em;
+			margin-bottom: 5px;
+			color: #555;
+		}
+
+		.alumni-carousel .testimonial-item h4 {
+			font-size: 1.1em;
+			color: #777;
+			margin-bottom: 15px;
+		}
+
+		.alumni-carousel .testimonial-content p {
+			font-size: 1em;
+			line-height: 1.6;
+			color: #666;
+		}
+
+		.owl-carousel .owl-nav {
+			margin-top: 10px;
+		}
+
+		.owl-carousel .owl-nav button {
+			background: #333;
+			color: #fff;
+			border-radius: 50%;
+			padding: 10px 15px;
+			border: none;
+			outline: none;
+			margin: 0 5px;
+			transition: background 0.3s ease;
+		}
+
+		.owl-carousel .owl-nav button:hover {
+			background: #555;
+		}
+
+		.item-video {
+			margin: 5px 10px;
+			/* Adjusted margin for top and bottom (5px) and left and right (10px) */
+		}
+
+
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			/* Maintain left positioning */
+			width: 100%;
+			/* Ensure header stretches across full width */
+			z-index: 100;
+			/* Set higher z-index to stay above content */
+			margin-bottom: 100px;
+			height: 40px;
+			opacity: 1;
+			background-color: whitesmoke;
+		}
+
+		.main-content {
+			padding-top: 80px;
+			/* Adjust padding based on your header height */
+		}
+
+		.banner {
+			margin-top: 148px;
+			/* Adjust margin based on your header height */
+		}
+
+		.main-header {
+			background-color: whitesmoke;
+			margin-top: -35px;
+			padding-top: 0;
+		}
+
+		.menu-list>li>a {
+			position: relative;
+			transition: color 0.3s ease;
+		}
+
+		.menu-list>li>a:hover {
+			color: #666;
+		}
+
+		.menu-list>li>a::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -2px;
+			left: 0;
+			background-color: #666;
+			visibility: hidden;
+			transform: scaleX(0);
+			transition: all 0.3s ease-in-out;
+		}
+
+		.menu-list>li>a:hover::after {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+
+		.menu-parent:hover .submenu,
+		.menu-parent:focus .submenu {
+			display: block;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.menu-parent2:hover .submenu2,
+		.menu-parent2:focus .submenu2 {
+			display: block;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.submenu,
+		.submenu2 {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+
+		.submenu li,
+		.submenu2 li {
+			position: relative;
+		}
+
+		.submenu li a:hover,
+		.submenu2 li a:hover {
+			background-color: #f0f0f0;
+		}
+
+		/* styles.css */
+		.gallery-img {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.img-overlay-container {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.img-overlay-container img {
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: transform 0.3s ease;
+		}
+
+		.overlay-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+			transition: opacity 0.3s ease;
+			opacity: 1;
+		}
+
+		.img-overlay-container:hover .overlay-text {
+			opacity: 1;
+			/* Show on hover */
+		}
+
+		.lightbox {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+			text-align: center;
+		}
+
+		.lightbox-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.lightbox img {
+			max-width: 80%;
+			max-height: 80%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #fff;
+			font-size: 36px;
+			cursor: pointer;
+		}
+
+		.content-container {
+			max-width: 800px;
+			margin: 0 auto;
+			/* Center the container */
+			text-align: center;
+			/* Center align text content */
+			padding: 20px;
+		}
+
+		.content-container h1 {
+			font-size: 2.5em;
+			/* Adjust heading size */
+			margin-bottom: 20px;
+			/* Add space below heading */
+		}
+
+		.content-container p {
+			font-size: 1.2em;
+			/* Adjust paragraph font size */
+			line-height: 1.6;
+			/* Increase line height for readability */
+			margin-bottom: 20px;
+			/* Add space below paragraphs */
+		}
+
+		.video-list {
+			list-style-type: none;
+			/* Remove default list styles */
+			padding: 0;
+		}
+
+		.video-list li {
+			margin-bottom: 30px;
+			/* Add space between video sections */
+		}
+
+		.video-list h3 {
+			font-size: 1.8em;
+			/* Adjust video section heading size */
+			margin-bottom: 10px;
+			/* Add space below video section headings */
+		}
+
+		.video-list iframe {
+			width: 100%;
+			/* Make sure iframe is responsive */
+			height: 400px;
+			/* Set a fixed height for consistency */
+			max-width: 100%;
+			/* Ensure iframe does not exceed container width */
+		}
+
+		.content-container h1 {
+			font-size: 40px;
+			/* Maintain font size as desired */
+			text-align: center;
+			/* Center align the heading */
+			margin-bottom: 20px;
+			/* Add some space below the heading */
+			font-weight: bold;
+			/* Make the text bold */
+			color: #206b66;
+			/* Set a nice blue color */
+			text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.2);
+			/* Add a subtle shadow for depth */
+		}
+
+		.content-container h3 {
+			font-size: 18px;
+			/* Adjust font size as needed */
+			line-height: 1.5;
+			/* Increase line spacing for readability */
+			margin-bottom: 20px;
+			/* Add some space below the paragraph */
+			color: #333;
+			/* Set a dark gray color */
+			text-align: center;
+			/* Justify the text for improved readability on wider screens */
+			font-style: italic;
+			/* Add a slight italic style for emphasis (optional) */
+		}
+
+		.logowrap h1 {
+			color: #999;
+			/* Light gray base color */
+			background-clip: text;
+			/* Clip background to the text */
+			-webkit-background-clip: text;
+			/* For older Webkit browsers */
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0));
+			/* Create a white to transparent gradient */
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+			/* Add a slight shadow for depth */
+		}
+		.logowrap h1 {
+			color: #272525;
+			/* Darker gray base color */
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+			/* Adjust gradient for less transparency */
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			/* Increase shadow intensity */
+		}
+		hr {
+			color-scheme: teal;
+		}
+		.button {
+			display: inline-block;
+			background-color: rgb(28, 92, 92);
+			color: white;
+			padding: 15px 30px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: rgb(18, 60, 60);
+		}
+
+		.login-block {
+			text-align: center;
+			margin-top: -4px;
+			margin-right: -5px;
+		}
+
+		.login-block a {
+			text-decoration: none;
+		}
+
+		.login-block h4 {
+			font-size: 18px;
+			/* Professional font size */
+			font-weight: bold;
+			color: white;
+			background-color: #00796b;
+			/* Professional teal shade */
+			padding: 12px 24px;
+			/* Balanced padding */
+			border-radius: 4px;
+			/* Slightly rounded corners */
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+			/* Subtle shadow */
+			transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+			display: inline-block;
+		}
+
+		.login-block h4:hover {
+			background-color: #004d40;
+			/* Darker teal on hover */
+			transform: translateY(-3px);
+			/* Subtle lift on hover */
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			/* Slightly stronger shadow */
+		}
+
+		
+	</style>
+</head>
+
+<body>
+	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="header" class="site-header">
+			<div style="background-color: #206b66;" class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:alumni.office@iiita.ac.in" itemprop="email"><i class="fas fa-envelope"></i>
+								alumni.office@iiita.ac.in</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+91 0532 292 2599" itemprop="telephone"><i class="fas fa-phone"></i>
+								+91 0532 292 2599</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<!--<li><a href=""><i class="fab fa-viber"></i></a></li>-->
+								<li><a href="https://www.iiita.ac.in/"><i class="fab fa-google-plus-g"></i></a></li>
+								<!-- <li><a href=""><i class="fab fa-facebook-square"></i></a></li>-->
+								<!--<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>-->
+								<li><a href="https://x.com/IIITA_Official?t=xzG5xMzW75-uCbk0MQddLw&s=09"><i
+											class="fab fa-twitter"></i></a></li>
+								<!--<li><a href=""><i class="fab fa-skype"></i></a></li>-->
+							</ul>
+						</div>
+						<div class="login-block">
+							<!--<a href="login.html">Login /</a>-->
+							<!--<a href="https://form.jotform.com/241824009680455">Register</a>-->
+							<a href="register.html" target="_blank">
+								<h4>Register Now!</h4>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div style="margin-left: -40px;" class="logowrap" itemprop="logo">
+						<img src="images/sitelogo.jpg" alt="Logo Image">
+						<h1>Silver Jubilee Global Alumni Meet 2024 <br> (27th Sept. to 29th Sept.)</h1>
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="index.html">GAM2024</a></li>
+								<li class="menu-parent"><a href="#">About</a>
+									<ul class="submenu">
+										<li><a href="index.html#AboutTheMeet">About The Event</a></li>
+										<li><a href="https://alumnimeet.iiita.ac.in/Tentative%20Schedule%20of%20the%20Global%20Alumni%20Meet%202024%20(04-06%20Nov2024).pdf"
+											target="_blank">Tentative Schedule</a></li>
+										<li><a href="index.html#activities">Activities</a></li>
+										<li><a href="https://alumnimeet.iiita.ac.in/GAM2024%20_Committees%20_List.pdf"
+												target="_blank">Organising Committee</a></li>
+										<li><a href="alumniawards.html">Alumni Awards</a></li>
+									</ul>
+								</li>
+								<li><a href="yt.html">YouTube Links</a></li>
+
+
+								<li><a href="template/index.html">Industry Academia Conclave</a></li>
+								<li class="menu-parent"><a href="#">Donation</a>
+									<ul class="submenu">
+										<li><a href="https://alumni.iiita.ac.in/donation-utilization/">Donation
+												Utilization</a></li>
+										<li><a href="https://alumni.iiita.ac.in/projects/donate-now/">Donate Now</a>
+										</li>
+										<li><a href="https://alumni.iiita.ac.in/how-you-can-contribute/">How You Can
+												Contribute</a></li>
+										<li class="menu-parent2"><a href="#">Donation Wall</a>
+											<ul class="submenu2">
+												<li><a href="https://alumni.iiita.ac.in/gold-wall/">Gold Wall</a></li>
+												<li><a href="https://alumni.iiita.ac.in/silver-wall/">Silver Wall</a>
+												</li>
+												<li><a href="https://alumni.iiita.ac.in/bronze-wall/">Bronze Wall</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<div style="margin-top: 200px;" class="content-container">
+			<h1 style="font-size: 30px;"><strong> YOUTUBE LIVE STREAMING LINKS FOR GLOBAL ALUMNI MEET 2024!</strong>
+			</h1>
+
+			<h3>We understand that many of you are not physically available on campus during the "Global Alumni Meet
+				2024". You may still enjoy the major events of the GAM2024 using the following Live streaming links, so
+				that you don't miss the event completely:</h3>
+			<ul class="video-list">
+				<br>
+
+				<hr style="color: black;">
+				<li>
+					<h2><strong> INAUGRAL FUNCTION<br> (5th Nov. 2022, from 9:45 AM to 1:00 PM IST)</strong></h2>
+					<iframe src="https://www.youtube.com/embed/DhiPbGxmJ2k" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</li>
+				<hr>
+				<li>
+					<h2><strong> CULTURAL EVENT <br> (5th Nov. 2022 from 5:30 PM to 9:00 PM IST)</strong></h2>
+					<iframe src="https://www.youtube.com/embed/f3qv9SxD1o0" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</li>
+				<hr>
+				<li>
+					<h2><strong> INDUSTRY-ACADEMIA CONCLAVE<br> (6th Nov. 2022 from 9:45 to 1:00 PM IST)</strong></h2>
+					<iframe src="https://www.youtube.com/embed/yU34eYFd_Io" frameborder="0"
+						allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</li>
+
+				<!-- Add more video sections as needed -->
+			</ul>
+		</div>
+		<footer style=" display: centre; background-color: #206b66;" class="page-footer" itemprop="footer" itemscope
+			itemtype="http://schema.org/WPFooter; ">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>ADDRESS</h1>
+						</header>
+						<p>IIIT Allahabad, Devghat, Jhalwa Prayagraj - 211015
+							Uttar Pradesh, India
+						</p>
+
+						<h4><a href="tel: +91 0532 292 2599"><i class="fas fa-phone"></i> +91 0532 292 2599</a></h4>
+						<h4><a href="mailto:alumni.office@iiita.ac.in"><i class="fas fa-envelope"></i>
+								alumni.office@iiita.ac.in</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Office of Alumni Affairs Admin
+								Extension-1</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							<li><a href="https://alumni.iiita.ac.in/">IIITA alumni meet website</a></li>
+
+
+						</ul>
+					</div>
+
+
+
+
+
+					<div class="box-wrap" style="margin-right: 0;">
+						<div>
+							<img src="images/sitelogo.jpg" alt="Logo Image">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+
+
+		</footer>
+		<script>
+			const bar = document.getElementById('bar');
+			const close = document.getElementById('close');
+			const nav = document.querySelector('.nav-wrap');
+
+			if (bar) {
+				bar.addEventListener('click', () => {
+					nav.classList.add('open');
+				});
+			}
+
+			if (close) {
+				close.addEventListener('click', () => {
+					nav.classList.remove('open');
+				});
+			}
+		</script>
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+				// Smooth scroll behavior for anchor links
+				document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+					anchor.addEventListener('click', function(e) {
+						e.preventDefault();
+			
+						const target = document.querySelector(this.getAttribute('href'));
+						if (target) {
+							target.scrollIntoView({
+								behavior: 'smooth',
+								block: 'start'
+							});
+						}
+					});
+				});
+			});
+				</script>
+</body>
+
+</html>

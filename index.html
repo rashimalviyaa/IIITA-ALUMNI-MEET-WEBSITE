@@ -1,0 +1,1464 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<link rel="shortcut icon" href="images/sitelogo.jpg" type="image/x-icon">
+	<title>GAM2024</title>
+	<meta name="viewport" content="width=device-width">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<link rel="stylesheet" type="text/css" href="css/all.min.css">
+	<link rel="stylesheet" type="text/css" href="css/lightbox.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
+	<link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.rateyo.css" />
+	<link rel="stylesheet" type="text/css" href="css/jquery.mmenu.all.css" />
+	<link rel="stylesheet" type="text/css" href="css/meanmenu.min.css">
+	<link rel="stylesheet" type="text/css" href="inner-page-style.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+	<style>
+		/* Optional: Adjust the spacing around the banner section */
+		.banner {
+			padding: 40px;
+			/* Adjust padding as needed */
+		}
+
+		.submenu {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			top: 100%;
+			left: 0;
+			z-index: 1000;
+		}
+
+		.submenu li {
+			width: 250px;
+		}
+
+		.submenu a {
+			padding: 10px 15px;
+			white-space: nowrap;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.menu-parent:hover .submenu {
+			display: block;
+		}
+
+		.submenu2 {
+			display: none;
+			position: absolute;
+			background-color: #fff;
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			top: 100%;
+			left: 30%;
+			z-index: 1000;
+		}
+
+		.submenu2 li {
+			width: 200px;
+		}
+
+		.submenu2 a {
+			padding: 10px 15px;
+			white-space: nowrap;
+			color: #fff;
+			text-decoration: none;
+		}
+
+		.menu-parent2:hover .submenu2 {
+			display: block;
+		}
+
+		.whyUs-section {
+			position: relative;
+			width: 100%;
+			padding: 0;
+
+			/* Remove any padding */
+		}
+
+		.whyUs-section .container {
+			padding: 0;
+			/* Ensure no padding on the container */
+		}
+
+		.banner-image {
+			width: 100%;
+			height: auto;
+			display: block;
+			/* Ensure the image is displayed as a block element */
+		}
+
+		.logowrap img {
+			width: 120px;
+			/* Adjust the width as needed */
+			height: 80px;
+			/* Maintain the aspect ratio */
+		}
+
+		body {
+			font-family: 'Arial, sans-serif';
+			background-color: #fff;
+			margin: 0;
+			padding: 0;
+		}
+
+		.chief-guests {
+			margin-bottom: 20px;
+			text-align: center;
+			padding: 50px 20px;
+		}
+
+		.alumni-guests {
+			margin-bottom: 40px;
+			text-align: center;
+			padding: 50px 20px;
+		}
+
+		.youtube {
+			margin-bottom: -250px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 130px;
+
+		}
+
+		html {
+			scroll-behavior: smooth;
+		}
+
+		.AboutTheMeet {
+			margin-top: -60px;
+			margin-bottom: -40px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 200px;
+
+		}
+
+		.activities {
+			margin-top: 20px;
+			margin-bottom: -50px;
+			text-align: center;
+			padding: 50px 20px;
+			scroll-margin: 170px;
+
+		}
+
+		.sponsors {
+			margin-top: 20px;
+			margin-bottom: -70px;
+			text-align: center;
+			padding: 50px 20px;
+
+		}
+
+		h2 {
+			font-size: 2.5em;
+			color: #333;
+			margin-bottom: 20px;
+		}
+
+		.guest-list {
+			display: flex;
+			justify-content: center;
+			gap: 50px;
+			flex-wrap: wrap;
+		}
+
+		.guest {
+			background-color: #fff;
+			border-radius: 15px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			overflow: hidden;
+			width: 200px;
+			transition: transform 0.3s;
+		}
+
+		.guest:hover {
+			transform: translateY(-10px);
+		}
+
+		.guest img {
+			width: 100%;
+			height: auto;
+			border-bottom: 2px solid black;
+		}
+
+		.name {
+			padding: 10px;
+			font-size: 1.2em;
+			color: white;
+			background-color: rgb(55, 124, 124);
+			border-top: 2px solid #fff;
+			margin: 0;
+		}
+
+		.announcement {
+
+			padding: 20px;
+			text-align: center;
+			margin-bottom: 30px;
+		}
+
+		.announcement-content {
+			max-width: 800px;
+			margin: 0 auto;
+			color: whitesmoke;
+			line-height: 1.6;
+		}
+
+		.announcement-content p {
+
+			font-size: 18px;
+			/* Adjust the font size as needed */
+			margin-bottom: 10px;
+		}
+
+		.announcement-content p strong {
+			font-weight: bold;
+		}
+
+		.gallery-images-section {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			padding: 20px;
+		}
+
+		.gallery-img-wrap {
+			flex: 0 0 calc(33.33% - 20px);
+			margin-bottom: 20px;
+			text-align: center;
+		}
+
+		.gallery-img-wrap a {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.img-overlay-container {
+			position: relative;
+			overflow: hidden;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			height: 200px;
+		}
+
+		.img-overlay-container img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			object-position: center;
+			display: block;
+			transition: transform 0.3s ease;
+		}
+
+		.img-overlay-container:hover img {
+			transform: scale(1.1);
+		}
+
+		.overlay-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			right: 0;
+			background-color: rgba(0, 0, 0, 0.7);
+			color: white;
+			padding: 10px;
+			font-size: 14px;
+		}
+
+		.lightbox {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.8);
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+		}
+
+		.lightbox-content {
+			position: relative;
+			width: 80%;
+			max-width: 800px;
+			height: auto;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+
+		.carousel-container {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			width: 100%;
+			height: 80vh;
+			/* Ensure the image fits within the viewport height */
+			overflow: hidden;
+		}
+
+		.carousel-container img {
+			max-width: 100%;
+			max-height: 100%;
+			object-fit: contain;
+		}
+
+		.prev-btn,
+		.next-btn {
+			position: absolute;
+			top: 50%;
+			transform: translateY(-50%);
+			background: rgba(255, 255, 255, 0.8);
+			border: none;
+			padding: 10px;
+			cursor: pointer;
+			z-index: 1001;
+		}
+
+		.prev-btn {
+			left: 0;
+		}
+
+		.next-btn {
+			right: 0;
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 10px;
+			right: 10px;
+			font-size: 24px;
+			cursor: pointer;
+			color: white;
+			z-index: 1001;
+		}
+
+		.sponsors-section {
+			padding: 40px 0;
+			/* Adjust padding as needed */
+			text-align: center;
+			/* Center align content */
+		}
+
+		.sponsors-section .container {
+			display: flex;
+			justify-content: center;
+			/* Center align flex items horizontally */
+			align-items: center;
+			/* Center align flex items vertically */
+			flex-wrap: wrap;
+			/* Ensure content wraps on smaller screens */
+		}
+
+		.sponsor-wrap {
+			margin: 5px;
+			/* Adjust margin between logos */
+		}
+
+		.sponsor-wrap img {
+			width: 150px;
+			/* Adjust width of each logo */
+			height: auto;
+			display: block;
+			border-radius: 8px;
+			/* Optional: Add border radius for rounded corners */
+			box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+			/* Optional: Add box shadow for depth */
+		}
+
+		.alumni-testimonials {
+			padding: 20px 0;
+			text-align: center;
+		}
+
+		body {
+			background-color: #f0f2f5;
+			color: #333;
+			font-family: Arial, sans-serif;
+		}
+
+		.alumni-testimonials {
+			padding: 50px 0;
+			background-color: #fff;
+			text-align: center;
+			box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+			margin: 30px auto;
+			border-radius: 10px;
+			max-width: 1200px;
+		}
+
+		.alumni-testimonials h1 {
+			font-size: 2.5em;
+			margin-bottom: 30px;
+			color: teal;
+			text-transform: uppercase;
+			letter-spacing: 2px;
+		}
+
+		.alumni-carousel .testimonial-item {
+			margin: 15px;
+			padding: 20px;
+			background: #fafafa;
+			border-radius: 10px;
+			box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+			text-align: center;
+		}
+
+		.alumni-carousel .testimonial-item figure {
+			margin: 0 0 15px;
+		}
+
+		.alumni-carousel .testimonial-item img {
+			width: 100px;
+			height: 100px;
+			border-radius: 50%;
+			object-fit: cover;
+			margin-bottom: 10px;
+		}
+
+		.alumni-carousel .testimonial-item h3 {
+			font-size: 1.8em;
+			margin-bottom: 5px;
+			color: #555;
+		}
+
+		.alumni-carousel .testimonial-item h4 {
+			font-size: 1.2em;
+			color: #777;
+			margin-bottom: 15px;
+		}
+
+		.alumni-carousel .testimonial-content p {
+			font-size: 1.3em;
+			line-height: 1.6;
+			color: #666;
+		}
+
+		.owl-carousel .owl-nav {
+			display: none;
+		}
+
+		.owl-carousel .owl-nav button {
+			background: #333;
+			color: #fff;
+			border-radius: 50%;
+			padding: 10px 15px;
+			border: none;
+			outline: none;
+			margin: 0 5px;
+			transition: background 0.3s ease;
+		}
+
+		.owl-carousel .owl-nav button:hover {
+			background: rgb(27, 59, 59);
+		}
+
+		.item-video {
+			margin: 5px 10px;
+			/* Adjusted margin for top and bottom (5px) and left and right (10px) */
+		}
+
+
+		.header {
+			position: fixed;
+			top: 0;
+			left: 0;
+			/* Maintain left positioning */
+			width: 100%;
+			/* Ensure header stretches across full width */
+			z-index: 100;
+			/* Set higher z-index to stay above content */
+			margin-bottom: 100px;
+			height: 40px;
+			opacity: 1;
+			background-color: whitesmoke;
+		}
+
+		.main-content {
+			padding-top: 80px;
+			/* Adjust padding based on your header height */
+		}
+
+		.banner {
+			margin-top: 148px;
+			/* Adjust margin based on your header height */
+		}
+
+		.main-header {
+			background-color: whitesmoke;
+			margin-top: -35px;
+			padding-top: 0;
+		}
+
+		.menu-list>li>a {
+			position: relative;
+			transition: color 0.3s ease;
+		}
+
+		.menu-list>li>a:hover {
+			color: #666;
+		}
+
+		.menu-list>li>a::after {
+			content: '';
+			position: absolute;
+			width: 100%;
+			height: 2px;
+			bottom: -2px;
+			left: 0;
+			background-color: #666;
+			visibility: hidden;
+			transform: scaleX(0);
+			transition: all 0.3s ease-in-out;
+		}
+
+		.menu-list>li>a:hover::after {
+			visibility: visible;
+			transform: scaleX(1);
+		}
+
+		.menu-parent:hover .submenu,
+		.menu-parent:focus .submenu {
+			display: block;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.menu-parent2:hover .submenu2,
+		.menu-parent2:focus .submenu2 {
+			display: block;
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.submenu,
+		.submenu2 {
+			opacity: 0;
+			transform: translateY(-10px);
+		}
+
+		.submenu li,
+		.submenu2 li {
+			position: relative;
+		}
+
+		.submenu li a:hover,
+		.submenu2 li a:hover {
+			background-color: #f0f0f0;
+		}
+
+		/* styles.css */
+		.gallery-img {
+			display: block;
+			text-decoration: none;
+			color: inherit;
+		}
+
+		.img-overlay-container {
+			position: relative;
+			overflow: hidden;
+		}
+
+		.img-overlay-container img {
+			display: block;
+			width: 100%;
+			height: auto;
+			transition: transform 0.3s ease;
+		}
+
+		.overlay-text {
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			width: 100%;
+			background-color: rgba(0, 0, 0, 0.5);
+			color: white;
+			text-align: center;
+			padding: 10px;
+			box-sizing: border-box;
+			transition: opacity 0.3s ease;
+			opacity: 1;
+			font-size: 20px;
+			font-style: bold;
+		}
+
+		.img-overlay-container:hover .overlay-text {
+			opacity: 1;
+			/* Show on hover */
+		}
+
+		.lightbox {
+			display: none;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.9);
+			z-index: 9999;
+			text-align: center;
+		}
+
+		.lightbox-content {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+		}
+
+		.lightbox img {
+			max-width: 80%;
+			max-height: 80%;
+			box-shadow: 0 0 20px rgba(0, 0, 0, 0.7);
+		}
+
+		.close-btn {
+			position: absolute;
+			top: 20px;
+			right: 20px;
+			color: #fff;
+			font-size: 36px;
+			cursor: pointer;
+		}
+
+		.logowrap h1 {
+			color: #272525;
+			/* Darker gray base color */
+			background-clip: text;
+			-webkit-background-clip: text;
+			background-image: linear-gradient(to right, rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0));
+			/* Adjust gradient for less transparency */
+			text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+			/* Increase shadow intensity */
+		}
+
+		.button {
+			display: inline-block;
+			background-color: rgb(28, 92, 92);
+			color: white;
+			padding: 15px 30px;
+			text-align: center;
+			text-decoration: none;
+			font-size: 18px;
+			border-radius: 5px;
+			transition: background-color 0.3s ease;
+		}
+
+		.button:hover {
+			background-color: rgb(18, 60, 60);
+		}
+
+		.login-block {
+			text-align: center;
+			margin-top: -4px;
+			margin-right: -5px;
+		}
+
+		.login-block a {
+			text-decoration: none;
+		}
+
+		.login-block h4 {
+			font-size: 18px;
+			/* Professional font size */
+			font-weight: bold;
+			color: white;
+			background-color: #00796b;
+			/* Professional teal shade */
+			padding: 12px 24px;
+			/* Balanced padding */
+			border-radius: 4px;
+			/* Slightly rounded corners */
+			box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+			/* Subtle shadow */
+			transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+			display: inline-block;
+		}
+
+		.login-block h4:hover {
+			background-color: #004d40;
+			/* Darker teal on hover */
+			transform: translateY(-3px);
+			/* Subtle lift on hover */
+			box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+			/* Slightly stronger shadow */
+		}
+
+		.intro-heading-wrapper {
+			position: relative;
+			display: inline-block;
+			text-align: center;
+			padding: 20px;
+			background: rgba(1, 96, 96, 0.5);
+			/* Teal color with opacity */
+			border-radius: 10px;
+			/* Optional: Add some border radius for rounded corners */
+
+		}
+
+		.intro-heading-wrapper h1,
+		.intro-heading-wrapper h2 {
+			margin: 0;
+			/* Remove default margin */
+			color: white;
+			
+		}
+
+		.intro-heading-wrapper h1 {
+			font-size: 4em;
+			margin-bottom: 10px;
+		}
+
+		.intro-heading-wrapper h2 {
+			font-size: 1.5em;
+			font-weight: normal;
+		}
+
+		.banner {
+			position: relative;
+		}
+
+		.banner-slide {
+			position: relative;
+		}
+
+		.banner-slide img {
+			width: 100%;
+			height: auto;
+		}
+
+		.banner-text {
+			position: absolute;
+			top: 20%;
+			left: 50%;
+			transform: translate(-50%, -20%);
+			text-align: center;
+			color: white;
+			/* Optional: You can add text shadow to make the text more readable */
+			
+		}
+
+		.banner-text h1 {
+			font-size: 3em;
+			margin: 0;
+			color: white;
+			/* Ensures text color is white */
+		}
+
+		.banner-text h3 {
+			font-size: 2em;
+			margin-top: 10px;
+			color: white;
+			/* Ensures text color is white */
+			text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+		}
+		/* Section Title */
+#AboutTheMeet h2 {
+    font-size: 2.5em;
+    color: black;
+    text-align: center;
+    margin: 40px 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* Announcement Section */
+#about.announcement {
+    background-color: #e1e1e1; /* light grey */
+    color: black;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 90px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.announcement-content p {
+    font-size: 18px;
+    margin: 10px 0;
+    color: #174d4d; /* dark teal */
+}
+
+.announcement-content p.subheading {
+    color: brown;
+    font-size: 20px;
+}
+
+.announcement-content a.button {
+    display: inline-block;
+    background-color: teal;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.announcement-content a.button:hover {
+    background-color: #004d4d; /* darker teal */
+}
+
+.announcement-content p a {
+    color: teal;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
+.announcement-content p a:hover {
+    color: #004d4d; /* darker teal */
+}
+.banner-image {
+    border: 2px solid teal; /* Adjust thickness and color as needed */
+    border-radius: 8px; /* Optional: adds rounded corners */
+    padding: 10px; /* Optional: adds padding inside the border */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional: adds a subtle shadow */
+}
+#page{
+	scroll-margin: 145px;
+}
+
+	</style>
+</head>
+
+<body>
+	<div id="page" class="site" itemscope itemtype="http://schema.org/LocalBusiness">
+		<header class="header" class="site-header">
+			<div style="background-color: #206b66;" class="top-header">
+				<div class="container">
+					<div class="top-header-left">
+						<div class="top-header-block">
+							<a href="mailto:alumni.office@iiita.ac.in" itemprop="email"><i class="fas fa-envelope"></i>
+								alumni.office@iiita.ac.in</a>
+						</div>
+						<div class="top-header-block">
+							<a href="tel:+91 0532 292 2599" itemprop="telephone"><i class="fas fa-phone"></i>
+								+91 0532 292 2599</a>
+						</div>
+					</div>
+					<div class="top-header-right">
+						<div class="social-block">
+							<ul class="social-list">
+								<!--<li><a href=""><i class="fab fa-viber"></i></a></li>-->
+								<li><a href="https://www.iiita.ac.in/" target="_blank"><i
+											class="fab fa-google-plus-g"></i></a></li>
+								<!-- <li><a href=""><i class="fab fa-facebook-square"></i></a></li>-->
+								<!--<li><a href=""><i class="fab fa-facebook-messenger"></i></a></li>-->
+								<li><a href="https://x.com/IIITA_Official?t=xzG5xMzW75-uCbk0MQddLw&s=09"
+										target="_blank"><i class="fab fa-twitter"></i></a></li>
+								<!--<li><a href=""><i class="fab fa-skype"></i></a></li>-->
+							</ul>
+						</div>
+						<div class="login-block">
+							<!--<a href="login.html">Login /</a>-->
+							<!--<a href="https://form.jotform.com/241824009680455">Register</a>-->
+							<a href="register.html" target="_blank">
+								<h4>Register Now!</h4>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- Top header Close -->
+			<div class="main-header">
+				<div class="container">
+					<div style="margin-left: -40px;" class="logowrap" itemprop="logo">
+						<img src="images/sitelogo.jpg" alt="Logo Image">
+						<h1 style="text-decoration:wavy;">Silver Jubilee Global Alumni Meet 2024 <br>(27th Sept. to 29th
+							Sept.)</h1>
+					</div>
+					<div class="nav-wrap">
+						<nav class="nav-desktop">
+							<ul class="menu-list">
+								<li><a href="index.html#page">GAM2024</a></li>
+								<li class="menu-parent"><a href="#">About</a>
+									<ul class="submenu">
+										<li><a href="#AboutTheMeet">About The Event</a></li>
+										<li><a href="https://alumnimeet.iiita.ac.in/Tentative%20Schedule%20of%20the%20Global%20Alumni%20Meet%202022%20(04-06%20Nov2022).pdf"
+												target="_blank">Tentative Schedule</a></li>
+										<li><a href="#activities">Activities</a></li>
+										<li><a href="https://alumnimeet.iiita.ac.in/GAM2022%20_Committees%20_List.pdf"
+												target="_blank">Organising committee</a></li>
+										<li><a href="alumniawards.html" target="_blank">Alumni Awards</a></li>
+									</ul>
+								</li>
+								<li><a href="yt.html">YouTube Links</a></li>
+
+
+								<li><a href="template/index.html">Industry Academia Conclave</a></li>
+								<li class="menu-parent"><a href="#">Donation</a>
+									<ul class="submenu">
+										<li><a href="https://alumni.iiita.ac.in/donation-utilization/"
+												target="_blank">Donation
+												Utilization</a></li>
+										<li><a href="https://alumni.iiita.ac.in/projects/donate-now/"
+												target="_blank">Donate Now</a>
+										</li>
+										<li><a href="https://alumni.iiita.ac.in/how-you-can-contribute/"
+												target="_blank">How You Can
+												Contribute</a></li>
+										<li class="menu-parent2"><a href="#">Donation Wall</a>
+											<ul class="submenu2">
+												<li><a href="https://alumni.iiita.ac.in/gold-wall/" target="_blank">Gold
+														Wall</a></li>
+												<li><a href="https://alumni.iiita.ac.in/silver-wall/"
+														target="_blank">Silver Wall</a>
+												</li>
+												<li><a href="https://alumni.iiita.ac.in/bronze-wall/"
+														target="_blank">Bronze Wall</a>
+												</li>
+											</ul>
+										</li>
+									</ul>
+								</li>
+							</ul>
+						</nav>
+
+
+					</div>
+				</div>
+			</div>
+		</header>
+		<!-- Header Close -->
+		<div class="banner">
+			<div style="width: 100%; margin-top: 0px;" class="owl-four owl-carousel" itemprop="image">
+				<div class="banner-slide">
+					<img src="images/mainpage2.jpg" alt="Image of Banner">
+					<div class="banner-text">
+						<h1 class="intro-heading-wrapper"><strong>WELCOME TO IIIT ALLAHABAD</strong></h1>
+						<h3 class="i" style="color:white;">
+							"Where It All Began...Join us as we celebrate the journey of our esteemed alumni and the legacy they continue to build."
+						</h3>
+						
+					</div>
+				</div>
+				<div class="banner-slide">
+					<img src="images/page-banner2.jpg" alt="Image of Banner">
+				</div>
+				<div class="banner-slide">
+					<img src="images/page-banner3.jpg" alt="Image of Banner">
+				</div>
+			</div>
+			<div id="owl-four-nav" class="owl-nav"></div>
+		</div>
+
+		<section>
+			<div id="AboutTheMeet" class="AboutTheMeet">
+				<h2>ABOUT THE EVENT</h2>
+			</div>
+		</section>
+		<div style="background-color: rgb(225, 225, 225); color: black; margin-bottom: 90px; margin-top: -70px;" id="about"
+			class="announcement">
+			<div class="announcement-content">
+				<p style="font-size: 23px; color: rgb(23, 77, 77);"><strong>IIIT Allahabad is going to organize the
+						Global Alumni Meet 2024 during 27th to 29th September 2024 at IIIT Allahabad. </strong></p>
+				<p style="color: brown;"><strong>A Nostalgia Trip...</strong></p>
+				<p style="color: black;"><strong>We are delighted to announce that IIIT Allahabad will host the Annual
+						Global Alumni Meet 2024 (GAM2024) on-campus from September 27th to 29th, 2024. We warmly invite you and your family to join
+						us, revisit your Alma Mater, and reminisce about the cherished moments of your past. Online
+						registration is now open.</strong></p>
+				<p style="color: brown"><strong>Please click here to register</a></strong></p>
+				<a style="color: white;" href="register.html" target="_blank" class="button">Register Now !</a>
+			</div>
+		</div>
+
+		<section>
+			
+		</section>
+		<!-- put a invitation/banner of IIITA alumni meet-->
+		<section style="background-color: transparent; margin-bottom: 40px; margin-top: -20px; size: 100%; "
+			class="whyUs-section">
+			<div class="container">
+				<img src="images/invitation.png" alt="Banner Image" class="banner-image">
+			</div>
+		</section>
+
+
+
+
+		<!-- Banner Close -->
+
+		<!-- start of guests -->
+
+		<div class="chief-guests">
+			<h2>CHIEF GUESTS</h2>
+			<div class="guest-list">
+				<div class="guest">
+					<img src="images/guest1.jpg" alt="Chief Guest 1">
+					<p class="name">Chief Patron
+						Dr. Mukul Sutaone
+						Director IIITA</p>
+				</div>
+				<div class="guest">
+					<img src="images/guest2.jpg" alt="Chief Guest 2">
+					<p class="name">Chief Guest
+						Dr. Anand Deshpande
+						Chairman, BoG</p>
+				</div>
+				<div class="guest">
+					<img src="images/guest3.jpg" alt="Chief Guest 3">
+					<p class="name">Guest of Honor
+
+						Prof. R.S Verma
+
+						Former Director IIITA</p>
+				</div>
+				<div class="guest">
+					<img src="images/guest4.jpg" alt="Chief Guest 4">
+					<p class="name">RSVP
+						Prof. Anupam
+						Dean (Alumni Affairs)</p>
+				</div>
+			</div>
+		</div>
+
+
+		<div class="chief-guests">
+			<h2>AlUMNI GUEST OF HONOR</h2>
+			<div class="guest-list">
+				<div class="guest">
+					<img src="images/alumniguest.jpg" alt="Alumni Guest 1">
+					<p class="name">Alumni Guest 1</p>
+				</div>
+				<div class="guest">
+					<img src="images/alumniguest.jpg" alt="Alumni Guest 2">
+					<p class="name">Alumni Guest 2</p>
+				</div>
+				<div class="guest">
+					<img src="images/alumniguest.jpg" alt="Alumni Guest 3">
+					<p class="name">Alumni Guest 3</p>
+				</div>
+			</div>
+		</div>
+
+		<!--end of guests-->
+		<section>
+			<div id="youtube" class="youtube">
+				<h2>YOUTUBE LINKS</h2>
+			</div>
+		</section>
+		<div class="banner">
+			<div class="owl-five owl-carousel owl-theme">
+				<div class="item-video">
+					<iframe width="100%" height="450" src="https://www.youtube.com/embed/f3qv9SxD1o0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen>
+					</iframe>
+				</div>
+				<div class="item-video">
+					<iframe width="100%" height="450" src="https://www.youtube.com/embed/DhiPbGxmJ2k" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+				<div class="item-video">
+					<iframe width="100%" height="450" src="https://www.youtube.com/embed/f3qv9SxD1o0" frameborder="0"
+						allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+						allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+
+
+
+
+		<!-- start of activities-->
+		<section>
+			<div id="activities" class="activities">
+				<h2>ACTIVITIES</h2>
+			</div>
+		</section>
+		<section class="gallery-images-section" itemprop="image" itemscope itemtype="http://schema.org/ImageGallery">
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 1">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img1.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Welcome Dinner</strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 2">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img2.jpg" alt="gallery Image">
+						<div class="overlay-text"><strong>Inauguration</strong></div>
+					</div>
+				</a>
+			</div>
+
+			<div class="gallery-img-wrap">
+				<a href="" class="gallery-img" data-title="Activity 3">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img3.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Felicitation</strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 4">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img4.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Departmental Visit</strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 5">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img5.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Gala Dinner </strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 6">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img6.jpg" alt="gallery-images">
+						<div class="overlay-text"> <strong>Cultural Event </strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 7">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img7.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Industry-Academia Conclave </strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 8">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img8.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Photo session</strong></div>
+					</div>
+				</a>
+			</div>
+			<div class="gallery-img-wrap">
+				<a href="#" class="gallery-img" data-title="Activity 9">
+					<div class="img-overlay-container">
+						<img src="images/gallery-img9.jpg" alt="gallery-images">
+						<div class="overlay-text"><strong>Recreational Activities</strong></div>
+					</div>
+				</a>
+			</div>
+		</section>
+		<div id="lightbox" class="lightbox">
+			<div class="lightbox-content">
+				<button class="prev-btn">❮</button>
+				<div class="carousel-container">
+
+				</div>
+				<button class="next-btn">❯</button>
+				<span class="close-btn">&times;</span>
+			</div>
+		</div>
+
+		<script src="scriptactivity.js"></script>
+
+		<!-- End of activities Images -->
+
+
+		<div class="sponsors">
+			<h2>SPONSORS</h2>
+		</div>
+		<section class="sponsors-section">
+			<div class="container">
+				<div class="sponsor-wrap">
+					<img src="images/sponsorlogo1.jpg" alt="sponsor logo 1">
+				</div>
+				<div class="sponsor-wrap">
+					<img src="images/sponsorlogo2.jpg" alt="sponsor logo 2">
+				</div>
+				<div class="sponsor-wrap">
+					<img src="images/sponsorlogo3.jpg" alt="sponsor logo 3">
+				</div>
+				<!-- Add more sponsor-wrap divs for additional sponsors -->
+			</div>
+		</section>
+
+		<!-- End of sponsors section -->
+
+		<section class="alumni-testimonials">
+			<div class="container">
+				<h1>What Our Alumni Say About Past Alumni Meets</h1>
+				<div class="alumni-carousel owl-carousel owl-theme">
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview1.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Yogesh kumar</h3>
+								<h4>Software Engineer</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>i had a great experience!</p>
+						</div>
+					</div>
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview2.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Anay dubey</h3>
+								<h4>Data Scientist</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>i had a great experience!</p>
+						</div>
+					</div>
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview3.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Shrey Gupta</h3>
+								<h4>Product Manager</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>I had a great experience!</p>
+						</div>
+					</div>
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview1.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Yogesh kumar</h3>
+								<h4>Software Engineer</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>i had a great experience!</p>
+						</div>
+					</div>
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview1.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Yogesh kumar</h3>
+								<h4>Software Engineer</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>i had a great experience!</p>
+						</div>
+					</div>
+					<div class="testimonial-item">
+						<figure>
+							<img class="alumni-img" src="images/alumnireview1.jpg" alt="Alumni Image">
+							<figcaption>
+								<h3>Yogesh kumar</h3>
+								<h4>Software Engineer</h4>
+							</figcaption>
+						</figure>
+						<div class="testimonial-content">
+							<p>i had a great experience!</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- End of Others talk -->
+		<section class="page-heading">
+			<div class="container">
+				<h2>latest news</h2>
+			</div>
+		</section>
+		<section class="latest-news">
+			<div class="container" itemprop="event" itemscope itemtype=" http://schema.org/Event">
+				<div class="owl-two owl-carousel">
+					<div class="news-wrap" itemprop="event">
+						<div class="news-img-wrap" itemprop="image">
+							<img src="images/latest-new-img.jpg" alt="Latest News Images">
+						</div>
+						<div class="news-detail" itemprop="description">
+							<a href="">
+								<h1>Orientation Programme for new Students.</h1>
+							</a>
+							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students..
+								Orientatin Programmes for new Students</p>
+						</div>
+					</div>
+
+					<div class="news-wrap" itemprop="event">
+						<div class="news-img-wrap" itemprop="image">
+							<img src="images/latest-new-img.jpg" alt="Latest News Images">
+						</div>
+						<div class="news-detail" itemprop="description">
+							<a href="">
+								<h1>Orientation Programme for new Students.</h1>
+							</a>
+							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students..
+								Orientatin Programmes for new Students</p>
+						</div>
+					</div>
+
+					<div class="news-wrap" itemprop="event">
+						<div class="news-img-wrap" itemprop="image">
+							<img src="images/latest-new-img.jpg" alt="Latest News Images">
+						</div>
+						<div class="news-detail" itemprop="description">
+							<a href="">
+								<h1>Orientation Programme for new Students.</h1>
+							</a>
+							<h2 itemprop="startDate">By Admin | 20 Dec. 2018</h2>
+
+							<p>Orientation Programme for new sffs Students. Orientatin Programmes for new Students..
+								Orientatin Programmes for new Students</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<!-- Latest News CLosed -->
+		<section class="query-section">
+			<div class="container">
+				<p>Any Queries? Ask us a question at<a href="tel: +91 0532 292 2599"><i class="fas fa-phone"></i> (+91)
+						0532 292 2599/2308 </a></p>
+			</div>
+		</section>
+		<!-- End of Query Section -->
+		<footer style=" display: centre; background-color: #206b66;" class="page-footer" itemprop="footer" itemscope
+			itemtype="http://schema.org/WPFooter; ">
+			<div class="footer-first-section">
+				<div class="container">
+					<div class="box-wrap" itemprop="about">
+						<header>
+							<h1>ADDRESS</h1>
+						</header>
+						<p>IIIT Allahabad, Devghat, Jhalwa Prayagraj - 211015
+							Uttar Pradesh, India
+						</p>
+
+						<h4><a href="tel: +91 0532 292 2599"><i class="fas fa-phone"></i> +91 0532 292 2599</a></h4>
+						<h4><a href="mailto:alumni.office@iiita.ac.in"><i class="fas fa-envelope"></i>
+								alumni.office@iiita.ac.in</a></h4>
+						<h4><a href=""><i class="fas fa-map-marker-alt"></i>Office of Alumni Affairs Admin
+								Extension-1</a></h4>
+					</div>
+
+					<div class="box-wrap">
+						<header>
+							<h1>links</h1>
+						</header>
+						<ul>
+							<li><a href="https://alumni.iiita.ac.in/">IIITA alumni meet website</a></li>
+
+
+						</ul>
+					</div>
+
+
+
+
+
+					<div class="box-wrap" style="margin-right: 0;">
+						<div>
+							<img src="images/sitelogo.jpg" alt="Logo Image">
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!-- End of box-Wrap -->
+
+
+		</footer>
+
+
+
+	</div>
+	<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
+	<script type="text/javascript" src="js/lightbox.js"></script>
+	<script type="text/javascript" src="js/all.js"></script>
+	<script type="text/javascript" src="js/isotope.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/owl.carousel.js"></script>
+	<script type="text/javascript" src="js/jquery.flexslider.js"></script>
+	<script type="text/javascript" src="js/jquery.rateyo.js"></script>
+	<script type="text/javascript" src="js/jquery.mmenu.all.js"></script>
+	<script type="text/javascript" src="js/jquery.meanmenu.min.js"></script>
+	<script type="text/javascript" src="js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+
+	<script>$(document).ready(function () {
+			$(".alumni-carousel").owlCarousel({
+				loop: true,
+				margin: 30,
+				nav: true,
+				responsive: {
+					0: {
+						items: 1
+					},
+					600: {
+						items: 2
+					},
+					1000: {
+						items: 3
+					}
+				}
+			});
+		});
+
+
+	</script>
+	<script>
+document.addEventListener("DOMContentLoaded", function() {
+    // Smooth scroll behavior for anchor links
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function(e) {
+            e.preventDefault();
+
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+                target.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'start'
+                });
+            }
+        });
+    });
+});
+	</script>
+	<script>
+		$(document).ready(function(){
+			$(".owl-four").owlCarousel({
+				items: 1,
+				loop: true,
+				autoplay: true,
+				autoplayTimeout: 3000, // Time between transitions (3000ms = 3s)
+				autoplayHoverPause: true, // Pause on hover
+				animateOut: 'fadeOut',
+        animateIn: 'fadeIn'
+		
+				
+			});
+		});
+		</script>
+		
+
+</body>
+
+</html>
